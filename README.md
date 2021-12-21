@@ -1,1 +1,1 @@
-# My-Projects
+# Data Structures and Algorithms
