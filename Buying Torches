@@ -1,0 +1,31 @@
+Question Link:- https://codeforces.com/contest/1418/problem/A
+Logic:- In question it is given that 1 stick + 1 coal = 1 torch. Hence we need k coals in order to make k torches.
+Equation : ((k*y)+k-1)/(x-1) -> will give you number of trades require for coals because in each trade you will gain x-1 sticks. Now if the answer is in decimal then add one to the trades other wise directly add k to the answer.
+
+TIME COMPLEXITY: O(1)
+SPACE COMPLEXITY: O(1)
+
+JAVA CODE:-
+import java.util.Scanner;
+public class Solution
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int test = sc.nextInt();
+        for(int g=0;g<test;g++)
+        {
+            long x = sc.nextLong();
+            long y = sc.nextLong();
+            long k = sc.nextLong();
+            long sticks = k*y;
+            sticks+=k;
+            sticks-=1;
+            long total = (long)sticks/(x-1);
+            long other = sticks%(x-1);
+            if(other!=0)
+            total++;
+            System.out.println(total+k);
+        }
+    }
+}
