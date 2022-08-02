@@ -1,3 +1,7 @@
+Question Link: https://codeforces.com/problemset/problem/1714/B
+Logic: We need to remove the left most elements so start traversing from right and add each unique element to hashset. Once you encountered a repeated element just break out of the loop and what ever length is found will be your unique array length which need to be subtracted from actual length of array in order to find the number of deletions.
+
+JAVA CODE:-
 import java.util.Scanner;
 import java.util.HashSet;
 public class Solution
